@@ -21,9 +21,9 @@ string.
 class FileProtocol:
     def __init__(self):
         self.file = FileInterface()
-    def proses_string(self, string_datamasuk=''):
-        logging.warning(f"string diproses: {string_datamasuk}")
-        c = shlex.split(string_datamasuk)
+    def proses_string(self, incoming_packet=''):
+        logging.warning(f"string diproses: {incoming_packet}")
+        c = shlex.split(incoming_packet)
         try:
             c_request = c[0]
             logging.warning(f"memproses request: {c_request}")
